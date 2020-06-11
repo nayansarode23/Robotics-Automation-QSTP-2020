@@ -26,7 +26,7 @@ class GotoPoint():
     def __init__(self):
         rospy.init_node('turtlebot3_pid_key', anonymous=False)
         rospy.on_shutdown(self.shutdown)
-        self.cmd_vel = rospy.Publisher('/path/cmd_vel', Twist, queue_size=5)
+        self.cmd_vel = rospy.Publisher('/path/cmd_vel', Point, queue_size=5)
         position = Point()
         move_cmd = Twist()
         r = rospy.Rate(10)
